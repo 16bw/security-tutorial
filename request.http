@@ -1,0 +1,23 @@
+### Registrar novo usuário
+POST http://localhost:8080/auth/register
+Content-Type: application/json
+
+{
+  "nomeDeUsuario": "novoUsuario",
+  "senha": "senha123"
+}
+
+### Login para obter token
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "nomeDeUsuario": "novoUsuario",
+  "senha": "senha123"
+}
+
+### Acessar rota protegida (exemplo)
+GET http://localhost:8080/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJGQVRFQyBBUEkiLCJzdWIiOiJub3ZvVXN1YXJpbyIsImV4cCI6MTc0NTM2MDg5NH0.QT_guMSD2Ayo8FhjH-VRl5TfFQ9byD0efHlfJiuIeYU
+
+Content-Type: application/json
